@@ -7,13 +7,11 @@ public class kegiatan1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String pilihan;
+        Buku[] bukuList = new Buku[3];
 
-        Book[] bookList = new Book[3];
-
-        // Mengisi array dengan objek buku
-        bookList[0] = new Book("2005051305", "Daniel Goleman", "Emotional Intellingence","pengetahuan",4);
-        bookList[1] = new Book("2005051224", "Almira Bastari", "Home Sweet Loan","novel",2);
-        bookList[2] = new Book("2005053465", "Jane Austen", "Pride and Prejudice","sejarah",6);
+        bukuList[0] = new Buku("2005051305", "Daniel Goleman", "Emotional Intellingence","pengetahuan",4);
+        bukuList[1] = new Buku("2005051224", "Almira Bastari", "Home Sweet Loan","novel",2);
+        bukuList[2] = new Buku("2005053465", "Jane Austen", "Pride and Prejudice","sejarah",6);
 
         do {
             System.out.println("Welcome to Library System");
@@ -43,7 +41,7 @@ public class kegiatan1 {
     }
 }
 
-class Book {
+class Buku {
     private String id;
     private String penulis;
     private String judul;
@@ -51,7 +49,7 @@ class Book {
     private int stok;
 
 
-    public Book(String id, String penulis, String judul,String kategori, int stok) {
+    public Buku(String id, String penulis, String judul, String kategori, int stok) {
         this.id = id;
         this.penulis = penulis;
         this.judul = judul;
@@ -242,16 +240,16 @@ class Student {
 
     public void displayBuku(){
 
-        Book[] bookList = new Book[3];
+        Buku[] bukuList = new Buku[3];
 
         // Mengisi array dengan objek buku
-        bookList[0] = new Book("2005051305", "Daniel Goleman", "Emotional Intellingence","pengetahuan",4);
-        bookList[1] = new Book("2005051224", "Almira Bastari", "Home Sweet Loan","novel",2);
-        bookList[2] = new Book("2005053465", "Jane Austen", "Pride and Prejudice","sejarah",6);
+        bukuList[0] = new Buku("2005051305", "Daniel Goleman", "Emotional Intellingence","pengetahuan",4);
+        bukuList[1] = new Buku("2005051224", "Almira Bastari", "Home Sweet Loan","novel",2);
+        bukuList[2] = new Buku("2005053465", "Jane Austen", "Pride and Prejudice","sejarah",6);
 
         System.out.println("List of Books:");
-        for (Book book : bookList) {
-            System.out.println(book);
+        for (Buku buku : bukuList) {
+            System.out.println(buku);
         }
     }
 
