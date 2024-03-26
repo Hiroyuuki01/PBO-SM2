@@ -143,7 +143,7 @@ class Admin {
             System.out.println("Masukkan NIM Mahasiswa:");
             nim = scanner.nextLine();
             if (!nim.matches("\\d{15}")){
-                System.out.println("NIM harus memiliki 15 digit dan hanya terdiri dari angka. Data tidak disimpan.");
+                System.out.println("NIM harus memiliki 15 digit dan hanya terdiri dari angka.");
                 i = 0;
             }
         } while (i == 0);
