@@ -132,17 +132,13 @@ public class Main {
     public static void addStudent() {
         System.out.print("Masukkan nama mahasiswa: ");
         String name = scanner.next();
-        int i = 1;
-        String nim;
-        do {
-            i = 1;
-            System.out.println("Masukkan NIM Mahasiswa:");
-            nim = scanner.nextLine();
-            if (!nim.matches("\\d{15}")){
-                System.out.println("NIM harus memiliki 15 digit dan hanya terdiri dari angka.");
-                i = 0;
-            }
-        } while (i == 0);
+        System.out.print("Masukkan NIM mahasiswa: ");
+        String nim = scanner.next();
+        if (nim.length() != 15) {
+            System.out.println("Invalid NIM. NIM harus panjang 15 angka.");
+            addStudent();
+            return;
+        }
         System.out.print("Masukkan fakultas mahasiswa: ");
         String faculty = scanner.next();
         System.out.print("Masukkan program studi mahasiswa: ");
